@@ -3,6 +3,7 @@
 <head>
 	<title>Register</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <meta name="viewport" content="width=device-width"/>
 </head>
 	
 
@@ -59,7 +60,7 @@
 					Name<input type="text" name="name" class="form-control input-md" placeholder="Enter Name" required="true"><br>
 					Email<input type="e-mail" name="email" class="form-control input-md" placeholder="mail@example.com" required="true"><br>
 					Username<input type="text" name="username" class="form-control input-md" placeholder="Enter Username" required="true"><br>
-					Password<input type="password" name="password" class="form-control input-md" placeholder="Enter password" required="true">
+					Password<input type="password" name="password" minlength="6" class="form-control input-md" placeholder="Enter password" required="true">
 					<div align="center" style="margin-top: 4px;"><input type="checkbox" required="true" name="agree" checked="true"><small>I agree to terms and conditions</small></div>
 					<div align="center" style="margin-top: 5px;"><button type="submit" class="btn btn-md btn-default btn-primary">Register</button></div>
 					
