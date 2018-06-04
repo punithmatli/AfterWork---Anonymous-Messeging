@@ -112,7 +112,7 @@ app.use(session({secret:'key'}));
      })
   	}
   	else{
-  		res.send('your email or password went wrong');
+  		res.send('your eeemail or password went wrong');
   	}
   })
 
