@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "project.js",
+  "scripts": {
+    "start": "node project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punithmatli/AfterWork---Anonymous-Messeging.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/punithmatli/AfterWork---Anonymous-Messeging/issues"
+  },
+  "homepage": "https://github.com/punithmatli/AfterWork---Anonymous-Messeging#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongojs": "^2.6.0"
+  },
+  "description": ""
+}

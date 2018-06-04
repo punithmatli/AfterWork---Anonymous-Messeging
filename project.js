@@ -7,6 +7,8 @@
 var mongojs=require('mongojs');
 var db=mongojs('mongodb://punith29:123456a@ds016718.mlab.com:16718/punith29',['project']);
 
+app.set('port',process.env.PORT||5000)
+
  var bodyParser=require('body-parser');
  app.use(bodyParser.urlencoded({extended:false}));
  var session=require('express-session');
@@ -184,8 +186,8 @@ app.post('/sent',function (req,res) {
 
 
 
-app.listen(5555,function(){
-	console.log(' server is running : 5555')
+app.listen(app.get('port'),function(){
+	console.log(' server is listening ')
 });
  
  			
