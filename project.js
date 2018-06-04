@@ -76,11 +76,11 @@ app.use(session({secret:'key'}));
 
  	}
   console.log(req.body.username);
-  db.find({username:req.body.username},function (er,newdoc) {
+  db.project.find({username:req.body.username},function (er,newdoc) {
     if(newdoc.length==0){
   console.log(req.body.username);
 
- 	db.insert(doc,function(err,docs){
+ 	db.project.insert(doc,function(err,docs){
  		if(err){
  			res.redirect('/register');
  		
@@ -103,16 +103,16 @@ app.use(session({secret:'key'}));
     username:req.body.username,
     password:req.body.password
   }
-  db.find(doc2,function(err,newdoc){
+  db.project.find(doc2,function(err,newdoc){
   	if(newdoc.length>0){
   		req.session.login=true;
    	  	req.session.username=newdoc[0].username;
-  		db.find({username:req.body.username},function(error,newdoc1){
+  		db.project.find({username:req.body.username},function(error,newdoc1){
   		res.render('messages',{messages:newdoc1,user:newdoc});
      })
   	}
   	else{
-  		res.send('your eeemail or password went wrong');
+  		res.send('your email or password went wrong');
   	}
   })
 
@@ -132,7 +132,7 @@ app.get('/logout',function(req,res){
 })
 
 app.get('/user/:usern',function (req,res) {
-    db.find({username:req.params.usern},function (error,newdoc) {
+    db.project.find({username:req.params.usern},function (error,newdoc) {
       if(newdoc.length==0){
         res.send("User name doesn't exist");
       }
@@ -150,7 +150,7 @@ app.post('/sent',function (req,res) {
  var docc={
   username:req.body.username
  }
- db.find(docc,function (e,doc) {
+ db.project.find(docc,function (e,doc) {
   if(doc.length>0){
     var u=req.session.user;
     var doc3={
@@ -159,7 +159,7 @@ app.post('/sent',function (req,res) {
       message:req.body.message
     };
     
-    db.insert(doc3,function (error,docs) {
+    db.project.insert(doc3,function (error,docs) {
       if(error){
         res.send('Not sent');
       }
