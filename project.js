@@ -48,7 +48,7 @@ app.use(session({secret:'key'}));
         username:req.session.username
       }
       console.log(req.session.username);
-       db.find(docc,function(error,newdoc1){
+       db.project.find(docc,function(error,newdoc1){
       res.render('messages',{messages:newdoc1,user:docc});
  })
 
