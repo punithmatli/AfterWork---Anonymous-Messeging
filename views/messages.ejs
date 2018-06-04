@@ -9,7 +9,7 @@
 <body class="ca">
 
 
-<nav class="navbar navbar-default black navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default black navbar-inverse navbar-fixed-top" style="padding: 10px;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -44,7 +44,7 @@
 <br>
 <h4 align="center"><b>Messages</b></h4>
 		<hr>
-		<% for(i=0;i<messages.length-1;i++){ %>
+		<% for(i=0;i<messages.length;i++){ %>
 		<div style="padding-right:13px;padding-left:13px;"><%= i+1 %>
 		. <%= messages[i].message %></div><hr>
 		<% } %>
